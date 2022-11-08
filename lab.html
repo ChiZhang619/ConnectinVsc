@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>
+    <a href="#" onclick="add(); return false">Click Me</a>
+</p>
+
+<ul id = "the-list">
+<li>First Item</li>
+</ul>
+<script>
+    count = 1;
+    function add(){
+        var x = document.createElement('li');
+        x.className = "list-item";
+        x.innerHTML = "The count" + count;
+        document.getElementById('the-list').appendChild(x)
+        count++;
+    }
+</script>
+</body>
+</html>
